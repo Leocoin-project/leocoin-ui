@@ -23,7 +23,7 @@ var showQRCode = (function($, QRCode) {
 
       qrcode.clear();
 
-      var data = "LEOcoincoin:"
+      var data = "LEOcoin:"
                + qraddress.val()
                + "?label="     + qrlabel.val()
                + "&narration=" + qrnarration.val()
