@@ -121,7 +121,7 @@ function optionMenuMain(tab) {
 }
 function optionMenu(tab) {
     $('#options .article-title').hide();
-    $('.tab-content').hide();
+    $('.tab-content.options').hide();
     $("#" + tab).show();
     $('.' + tab).show();
 }

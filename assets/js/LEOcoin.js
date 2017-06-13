@@ -670,7 +670,7 @@ var optionsPage = {
                 element.val(value);
 
             element.on("change", function () {
-                if($('#options').is(':visible')){
+                if ($('#options').is(':visible')) {
                     $("#options-ok,#options-apply").removeClass("disabled");
                 }
             });
@@ -2302,15 +2302,15 @@ function combineMessages(prev_message, message) {
     // var m = $("<p>" + (time.getHours() < 10 ? "0" : "") + time.getHours() + ":" + (time.getMinutes() < 10 ? "0" : "") + time.getMinutes() + "</p>").insertAfter($("#" + prev_message.id +" .text-bubble p"))
     var m = $("<p>" + processMessageForDisplay(message.message) + "</p>").insertAfter($("#" + prev_message.id + ""))
         .attr('id', message.id)
-    .append(createMessageDeleteButton()) //properly escaped
-    .hover(
-        function () {
-            $(this).find(".delete").show();
-        },
-        function () {
-            $(this).find(".delete").hide();
-        }
-    );
+        .append(createMessageDeleteButton()) //properly escaped
+        .hover(
+            function () {
+                $(this).find(".delete").show();
+            },
+            function () {
+                $(this).find(".delete").hide();
+            }
+        );
     m.find(".delete").hover(
         function () {
             $("#" + message.id).addClass("message-text-selected"); //make the hover do stuff
@@ -2527,7 +2527,7 @@ function submitInviteModal() {
 
 function scrollMessages(force) {
 
-    var scroll=function(){
+    var scroll = function () {
         $(".chat-history").scrollTop($(".chat-history")[0].scrollHeight);
     };
     setTimeout(scroll, 100);
