@@ -1046,6 +1046,7 @@ function addressLookup(returnFields, receive, filterType) {
         $('#address-lookup-address-type').val(filterType);
         doFilter();
     }
+    $('#address-lookup-modal').show();
 }
 
 function transactionPageInit() {

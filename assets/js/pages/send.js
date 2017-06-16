@@ -24,9 +24,9 @@ var sendPage = (function ($) {
                 $("#send-balance .pay_to").val(address.address).change();
                 $("#send-balance .pay_to").data('address', address.address);
             }
-        } else{
+        } else {
             var data = $("#send-balance .pay_to").data('address');
-            if(data) {
+            if (data) {
                 $("#send-balance .pay_to").val(data);
                 $("#send-balance .pay_to").change();
             }
@@ -279,6 +279,8 @@ var sendPage = (function ($) {
 
         var enable_adv = $(".show-advanced-controls").hasClass('active');
 
+
+
         $(".advanced_controls").toggle(enable_adv);
 
         $("#tx_ringsize,#suggest_ring_size").toggle((bridge.info.options ? bridge.info.options.AutoRingSize != true : true) && tx_type > 1 && enable_adv);
@@ -286,6 +288,13 @@ var sendPage = (function ($) {
 
         if (!enable_adv && !main)
             initSendBalance();
+
+        if (!$("#coincontrol").is(':visible')) {
+            $(".show-coin-control").removeClass('active');
+            $(".show-coin-control").removeClass('submit');
+            $(".show-coin-control").addClass('reset')
+
+        }
     }
 
     function getTransactionType() {
